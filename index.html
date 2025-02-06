@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayyah's LoveCard Selector 💖</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mayyah's LoveCard Selector 💖</h1>
+
+        <p class="love-message">
+            May Allah continue to bless you and keep you safe, and I look forward to spending my life with you by my side, inshaAllah.  
+            I love every moment with you, and I know that sometimes it will be rough, but I make that promise to you, inshaAllah,  
+            that we will get through anything together. InshaAllah, may Allah continue to bless this union.  
+            You are everything to me, and I will do my utmost best to ensure you are loved, that you feel it,  
+            and that you are treated with the most amount of respect, my sweetheart.  
+            I want to romance you in every way possible. 💖
+        </p>
+
+        <button id="languageToggle" class="language-toggle">العربية</button>
+
+        <div id="moodSelector" class="mood-selector">
+            <h2 id="moodTitle">How are you feeling today, Mayyah?</h2>
+            <div class="mood-buttons">
+                <button class="mood-button" data-mood="Happy"><i class="fas fa-smile"></i> Happy</button>
+                <button class="mood-button" data-mood="Sad"><i class="fas fa-frown"></i> Sad</button>
+                <button class="mood-button" data-mood="Tired"><i class="fas fa-bed"></i> Tired</button>
+                <button class="mood-button" data-mood="Excited"><i class="fas fa-grin-stars"></i> Excited</button>
+                <button class="mood-button" data-mood="Loved"><i class="fas fa-heart"></i> Loved</button>
+            </div>
+        </div>
+
+        <div id="cardGrid" class="card-grid"></div>
+        <button id="addCard" class="add-card"><i class="fas fa-plus"></i> Add New Card</button>
+
+        <div id="musicPlayer" class="music-player">
+            <audio id="audioPlayer"></audio>
+            <button id="playPause" class="play-pause"><i class="fas fa-play"></i></button>
+            <div class="song-info">
+                <p id="songTitle"></p>
+                <p id="nowPlaying">Now Playing</p>
+            </div>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+            <button id="nextSong" class="next-song"><i class="fas fa-forward"></i></button>
+        </div>
+    </div>
+
+    <div id="confetti"></div>
+
+    <!-- Hidden Love Note Section -->
+    <div id="hiddenLoveNote" class="hidden-note">
+        <button id="revealNote" class="reveal-button">💌 Tap to Reveal a Special Note</button>
+        <p id="loveNoteText" class="love-note-text">You are my heart, my love, my everything. InshaAllah, I will always cherish you. 💕</p>
+    </div>
+
+    <!-- Footer with Heart Animation and Handwritten Name -->
+    <footer class="footer">
+        <p>Made by 
+            <span class="handwritten">Your's Truly, Fayyad</span>, 
+            Your Future Hubby InshaAllah ❤️ 
+            <span class="beating-heart">💓</span>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
