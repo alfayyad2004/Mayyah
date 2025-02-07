@@ -328,14 +328,23 @@ h1 {
   }
 }
 
-.tulip {
+.tulip-wrapper {
   position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tulip {
+  position: absolute;
   bottom: 0;
   width: 40px;
   height: 150px;
   background: linear-gradient(to bottom, #228b22, #32cd32);
   border-radius: 0 0 20px 20px;
-  z-index: 0;
 }
 
 .tulip::before {
@@ -462,6 +471,27 @@ h1 {
   .beating-heart {
     font-size: 1.2rem;
   }
+
+  /* Tulip optimizations for mobile */
+  .tulip-wrapper {
+    height: 150px;
+  }
+  .tulip {
+    width: 30px;
+    height: 120px;
+  }
+  .tulip::before {
+    top: -25px;
+    left: -12px;
+    width: 55px;
+    height: 50px;
+  }
+  .tulip:nth-child(2n) {
+    height: 110px;
+  }
+  .tulip:nth-child(3n) {
+    height: 130px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -480,6 +510,27 @@ h1 {
   }
   .card {
     height: 180px;
+  }
+
+  /* Further tulip optimizations for smaller screens */
+  .tulip-wrapper {
+    height: 120px;
+  }
+  .tulip {
+    width: 25px;
+    height: 100px;
+  }
+  .tulip::before {
+    top: -20px;
+    left: -10px;
+    width: 45px;
+    height: 40px;
+  }
+  .tulip:nth-child(2n) {
+    height: 90px;
+  }
+  .tulip:nth-child(3n) {
+    height: 110px;
   }
 }
 
